@@ -3,7 +3,7 @@ import requests
 
 def get_all_products(base_url: str, path_variable: str):
     """
-    Fetches the status of the API from the specified endpoint.
+    Fetches all products.
 
     :param base_url: The base url of the API.
     :param path_variable: The path variable of the API.
