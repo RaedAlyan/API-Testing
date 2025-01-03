@@ -1,9 +1,9 @@
 import requests
 
 
-def get_specific_product(base_url: str, path_variable: str, query_parameters: dir) -> tuple:
+def get_specific_products_based_on_category(base_url: str, path_variable: str, query_parameters: dir) -> tuple:
     """
-    Fetches a specific product.
+    Fetches specific products based on a category.
 
     :param base_url: The base url of the API.
     :param path_variable: The path variable of the API.
@@ -30,7 +30,7 @@ if __name__ == '__main__':
         "category": "candy"
     }
     try:
-        status_code, products = get_specific_product(BASE_URL, PATH_VARIABLE, QUERY_PARAMS)
+        status_code, products = get_specific_products_based_on_category(BASE_URL, PATH_VARIABLE, QUERY_PARAMS)
         print(f'Status code: {status_code}')
         print(f'Products are: {products}')
     except RuntimeError as error:
